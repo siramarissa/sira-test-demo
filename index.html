@@ -1,39 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eye to Eye</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
   body {
-    background-color: #848B79; /* Use your preferred sage hex code here */
+    background-color: #848B79;
+    /* Use your preferred sage hex code here */
   }
 </style>
-  <body>
-    <h1>Hello, World!<h1>
-        <p>This is a longer paragraph. I am learning code.</p>
-        <a href="page-two.html">Go to second page</a></p>
 
-        <!-- This is a comment, it doesn't show on your page, but is just a way to leave notes in the code. -->
+<body>
+  <h1>Eye to eye</h1>
+  <!-- <p>This is a longer paragraph. I am learning code.</p> -->
+  <!-- <a href="page-two.html">Go to second page</a></p> -->
 
-        <!-- To add an image: -->
-         <!-- An image has two main parts, 1 is the opening and closing <img> </img> tags -->
-        <!-- The other part is the src, which is your photo url -->
+  <!-- This is a comment, it doesn't show on your page, but is just a way to leave notes in the code. -->
 
-        <!-- if the photo is from the internet -->
-         <img src="https://cdn.sanity.io/images/0s7kskkf/production/0e6b3cf1df2efd9cf49a7d296e2a439a99a1bd71-5000x3333.jpg?w=2000&auto=format"></img>
-  
-         <!-- if the image is from your computer, you have to first drag and drop it into this project folder -->
-        <img src="font-glyph.png"></img>
+  <!-- bedroom image -->
+  <div class="image-container">
+    <img class="bedroom-image" src="room.jpeg"></img>
 
+    <!-- Fill in this link later -->
+    <a href="https://learnlayout.com/position" target="_blank">
+      <div class="keyboard">
+        <!-- ADD THE PNG IMAGE IN HERE -->
+      </div>
+    </a>
 
-        <!-- here i'm including a video  !! it has to be in mp4 not mov like what I put!-->
-         <video>
-          <source src="test-video.mov" type="video/quicktime">
-         </video>
-         
-        </body>
+    <a href="https://learnlayout.com/position" target="_blank">
+      <div class="negatives">
+        <!-- ADD THE PNG IMAGE IN HERE -->
+        <img class="negatives-image" src="negatives.jpeg"></img>
+      </div>
+    </a>
+
+  </div>
+
+</body>
+
+<style>
+
+  /* Control/command + forward slash to comment or uncomment lines */
+  /* these three blocks are for the negatives poster and container */
+  .negatives-image {
+    width: 16%;
+  }
+
+  .negatives {
+    position: absolute;
+    /* border: 4px solid red; */
+    /* transform: rotate(20deg); */
+    /* these are helping position this keyboard div around the photo */
+    top: 32.5%;
+    left: 36.5%;
+  }
+
+  .negatives:hover {
+    cursor: url("eye.png"), pointer;
+    transform: rotate(5deg);
+  }
+
+  /* these two blocks are the keyboard hover / positioning code */
+  .keyboard {
+    position: absolute;
+    width: 17%;
+    height: 8%;
+    border: 4px solid red;
+    transform: rotate(20deg);
+
+    /* these are helping position this keyboard div around the photo */
+    top: 80%;
+    left: 44%;
+  }
+
+  .keyboard:hover {
+    cursor: url("eye.png"), pointer;
+  }
+
+  .image-container {
+    display: inline-block;
+    position: relative;
+  }
+
+  .bedroom-image {
+    width: 80vw;
+    /* vw is viewport width, viewport being your window */
+  }
+</style>
+
 </html>
